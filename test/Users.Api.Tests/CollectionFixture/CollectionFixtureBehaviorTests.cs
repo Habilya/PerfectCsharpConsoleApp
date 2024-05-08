@@ -4,6 +4,8 @@ using Xunit.Abstractions;
 namespace Users.Api.Tests.CollectionFixture;
 
 // These 2 test classes are sharing the same fixture, which is good to separate test groups
+// Take not of the annotations on test classes
+// Take note that Fixture's (GuidTestsFixture) Constructor and Dispose will be called only ONCE
 
 [Collection("Collection fixture to test behavior")]
 public class CollectionFixtureBehaviorTests
