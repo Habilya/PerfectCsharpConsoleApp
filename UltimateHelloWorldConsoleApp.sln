@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostmanCloneUI", "src\Postm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api", "src\Users.Api\Users.Api.csproj", "{1886C70C-067E-499A-9D9D-63D2AC00322A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Api.Tests", "test\Users.Api.Tests\Users.Api.Tests.csproj", "{7DB67E78-CE31-4CCB-B700-2CAE545276BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api.Tests", "test\Users.Api.Tests\Users.Api.Tests.csproj", "{7DB67E78-CE31-4CCB-B700-2CAE545276BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTestingExamples.Tests", "test\IntegrationTestingExamples.Tests\IntegrationTestingExamples.Tests.csproj", "{EFC0BF8D-C489-48A2-B340-6E87301E0378}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{7DB67E78-CE31-4CCB-B700-2CAE545276BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB67E78-CE31-4CCB-B700-2CAE545276BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB67E78-CE31-4CCB-B700-2CAE545276BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC0BF8D-C489-48A2-B340-6E87301E0378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC0BF8D-C489-48A2-B340-6E87301E0378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC0BF8D-C489-48A2-B340-6E87301E0378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC0BF8D-C489-48A2-B340-6E87301E0378}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{B2C2C791-7FBA-4A61-B922-96C99564D669} = {0E7F4DF7-2E43-498D-BD65-B75BC922FD1D}
 		{1886C70C-067E-499A-9D9D-63D2AC00322A} = {0E7F4DF7-2E43-498D-BD65-B75BC922FD1D}
 		{7DB67E78-CE31-4CCB-B700-2CAE545276BF} = {AA2BE685-92B1-462F-8492-063996F7F32D}
+		{EFC0BF8D-C489-48A2-B340-6E87301E0378} = {AA2BE685-92B1-462F-8492-063996F7F32D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0DB25E3E-1B6A-41E6-92C4-6E2F7DEA7B41}
