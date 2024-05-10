@@ -10,11 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="MockedPetStoreApi\response\users_normal.json" />
+    <None Remove="MockedTypicodeApi\response\users_normal.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="MockedPetStoreApi\response\users_normal.json">
+    <Content Include="MockedTypicodeApi\response\users_normal.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

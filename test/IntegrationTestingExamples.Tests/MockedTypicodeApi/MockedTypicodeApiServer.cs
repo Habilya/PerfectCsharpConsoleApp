@@ -2,9 +2,9 @@
 using WireMock.ResponseBuilders;
 using WireMock.Server;
 
-namespace IntegrationTestingExamples.Tests.MockedPetStoreApi;
+namespace IntegrationTestingExamples.Tests.MockedTypicodeApi;
 
-public class MockedPetStoreApiServer : IDisposable
+public class MockedTypicodeApiServer : IDisposable
 {
 	private WireMockServer _server;
 
@@ -23,7 +23,7 @@ public class MockedPetStoreApiServer : IDisposable
 			.WithPath("/users")
 			.UsingGet())
 			.RespondWith(Response.Create()
-				.WithBodyFromFile("response/users_normal.json")
+				.WithBodyFromFile("MockedTypicodeApi/response/users_normal.json")
 				.WithHeader("content-type", "application/json; charset=utf-8")
 				.WithStatusCode(200)
 			);

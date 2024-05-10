@@ -8,11 +8,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 using Users.Api;
 
-namespace IntegrationTestingExamples.Tests.MockedPetStoreApi;
+namespace IntegrationTestingExamples.Tests.MockedTypicodeApi;
 
-public class PetStoreApiFactory : WebApplicationFactory<IApiMarker>
+public class TypicodeApiFactory : WebApplicationFactory<IApiMarker>, IAsyncLifetime
 {
-	private readonly MockedPetStoreApiServer _petStoreApiServer = new();
+	private readonly MockedTypicodeApiServer _typicodeApiServer = new();
 
 	protected override void ConfigureWebHost(IWebHostBuilder builder)
 	{
@@ -22,9 +22,9 @@ public class PetStoreApiFactory : WebApplicationFactory<IApiMarker>
 		{
 			services.RemoveAll(typeof(IHostedService));
 
-			services.AddHttpClient("PetstoreApi", httpClient =>
+			services.AddHttpClient("TypicodeApi", httpClient =>
 			{
-				httpClient.BaseAddress = new Uri(_petStoreApiServer.Url);
+				httpClient.BaseAddress = new Uri(_typicodeApiServer.Url);
 				httpClient.DefaultRequestHeaders.Add(
 					HeaderNames.Accept, "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7");
 				httpClient.DefaultRequestHeaders.Add(
@@ -35,12 +35,12 @@ public class PetStoreApiFactory : WebApplicationFactory<IApiMarker>
 
 	public async Task InitializeAsync()
 	{
-		_petStoreApiServer.Start();
-		_petStoreApiServer.SetupUsers();
+		_typicodeApiServer.Start();
+		_typicodeApiServer.SetupUsers();
 	}
 
 	public new async Task DisposeAsync()
 	{
-		_petStoreApiServer.Dispose();
+		_typicodeApiServer.Dispose();
 	}
 }
