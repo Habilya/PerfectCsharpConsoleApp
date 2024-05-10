@@ -3,11 +3,11 @@ using IntegrationTestingExamples.Tests.MockedTypicodeApi;
 
 namespace IntegrationTestingExamples.Tests;
 
-public class PetStoreApiTests : IClassFixture<TypicodeApiFactory>
+public class IntegrationTestsExamples : IClassFixture<TypicodeApiFactory>
 {
 	private readonly HttpClient _httpClient;
 
-	public PetStoreApiTests(TypicodeApiFactory apiFactory)
+	public IntegrationTestsExamples(TypicodeApiFactory apiFactory)
 	{
 		_httpClient = apiFactory.CreateClient();
 	}
