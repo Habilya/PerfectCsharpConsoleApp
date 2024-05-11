@@ -12,7 +12,7 @@ services:
       - ASPNETCORE_Kestrel__Certificates__Default__Password=Test1234!
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/cert.pfx
       - ASPNETCORE_Environment=Production
-      - CustomersWebApp_Database__ConnectionString=Server=test-db;Port=5432;Database=mydb;User ID=course;Password=changeme;
+      - CustomersWebApp_Database__ConnectionString=Server=integration-db;Port=5432;Database=mydb;User ID=course;Password=changeme;
       - CustomersWebApp_GitHub__ApiBaseUrl=http://localhost:9850
     depends_on: 
       integration-db:
@@ -26,7 +26,7 @@ services:
       - POSTGRES_PASSWORD=changeme
       - POSTGRES_DB=mydb
     healthcheck:
-      test: [ "CMD-SHELL", "pg-isready" ]
+      test: [ "CMD-SHELL", "pg_isready" ]
       interval: 2s
       timeout: 5s
       retries: 10
