@@ -4,36 +4,36 @@ using Microsoft.Playwright;
 namespace Customers.WebApp.Tests.Pages;
 
 [Collection("Test collection")]
-public class AddCustomerTests
+public class GetCustomerTests
 {
 	private readonly SharedTestContext _testContext;
 
-	public AddCustomerTests(SharedTestContext testContext)
+	public GetCustomerTests(SharedTestContext testContext)
 	{
 		_testContext = testContext;
 	}
 
+
 	[Fact(Timeout = 3000)]
-	public async Task Create_ShouldCreateCustomer_WhenDataIsValid()
+	public async Task Get_ShouldReturnCustomer_WhenCustomerExists()
 	{
 		// Arrange
 		var page = await _testContext.Browser.NewPageAsync(new BrowserNewPageOptions
 		{
 			BaseURL = SharedTestContext.AppUrl
 		});
-
-		// Act
 		// recommended to insert a customer directly into a database
 		var customer = await _testContext.CreateCustomer(page);
 
-		// Assert
+		// Act
 		var linkElement = page.Locator("article>p>a").First;
 		var link = await linkElement.GetAttributeAsync("href");
 		await page.GotoAsync(link!);
 
+		// Assert
 		// Page screenshot should be taken FIRST
 		// if test fails screenshot is not taken!!
-		await _testContext.TakeFullPageSreenShot(page, this.GetType().Name, nameof(Create_ShouldCreateCustomer_WhenDataIsValid));
+		await _testContext.TakeFullPageSreenShot(page, this.GetType().Name, nameof(Get_ShouldReturnCustomer_WhenCustomerExists));
 
 		(await page.Locator("p[id=fullname-field]").InnerTextAsync()).Should().Be(customer.FullName);
 		(await page.Locator("p[id=email-field]").InnerTextAsync()).Should().Be(customer.Email);
@@ -47,30 +47,25 @@ public class AddCustomerTests
 	}
 
 	[Fact(Timeout = 3000)]
-	public async Task Create_ShowsError_WhenEmailIsInvalid()
+	public async Task Get_ShouldReturnNoCustomer_WhenCustomerDoesntExist()
 	{
 		// Arrange
 		var page = await _testContext.Browser.NewPageAsync(new BrowserNewPageOptions
 		{
 			BaseURL = SharedTestContext.AppUrl
 		});
-		await page.GotoAsync("add-customer");
-		var customer = _testContext.CustomerGenerator.Generate();
+		// Non existent customer url
+		var customerUrl = $"{SharedTestContext.AppUrl}/customer/{Guid.NewGuid()}";
 
 		// Act
-		await page.FillAsync("input[id=fullname]", customer.FullName);
-		await page.FillAsync("input[id=email]", "[Invalid_Email]");
-		await page.FillAsync("input[id=github-username]", customer.GitHubUsername);
-		await page.FillAsync("input[id=dob]", customer.DateOfBirth.ToString("yyyy-MM-dd"));
+		await page.GotoAsync(customerUrl);
 
 		// Assert
 		// Page screenshot should be taken FIRST
 		// if test fails screenshot is not taken!!
-		await _testContext.TakeFullPageSreenShot(page, this.GetType().Name, nameof(Create_ShowsError_WhenEmailIsInvalid));
+		await _testContext.TakeFullPageSreenShot(page, this.GetType().Name, nameof(Get_ShouldReturnNoCustomer_WhenCustomerDoesntExist));
 
-		var element = page.Locator("li.validation-message").First;
-		var text = await element.InnerTextAsync();
-		text.Should().Be("Invalid email format");
+		(await page.Locator("article>p").InnerTextAsync()).Should().Be("No customer found with this id");
 
 		await page.CloseAsync();
 	}
