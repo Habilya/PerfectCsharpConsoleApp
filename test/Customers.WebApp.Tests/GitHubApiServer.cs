@@ -2,7 +2,7 @@
 using WireMock.ResponseBuilders;
 using WireMock.Server;
 
-namespace Customers.WebApp.Tests;
+namespace Customers.WebApp.Tests.Integration;
 
 public class GitHubApiServer : IDisposable
 {

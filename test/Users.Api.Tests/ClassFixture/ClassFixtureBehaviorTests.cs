@@ -1,6 +1,6 @@
 ﻿using Xunit.Abstractions;
 
-namespace Users.Api.Tests.ClassFixture;
+namespace Users.Api.Tests.Unit.ClassFixture;
 
 public class ClassFixtureBehaviorTests : IClassFixture<GuidTestsFixture>
 {

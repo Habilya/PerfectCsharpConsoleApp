@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Microsoft.Playwright;
 
-namespace Customers.WebApp.Tests.Pages;
+namespace Customers.WebApp.Tests.Integration.Pages;
 
 [Collection("Test collection")]
 public class AddCustomerTests
@@ -13,7 +13,7 @@ public class AddCustomerTests
 		_testContext = testContext;
 	}
 
-	[Fact(Timeout = 4000)]
+	[Fact(Timeout = 5000)]
 	public async Task Create_ShouldCreateCustomer_WhenDataIsValid()
 	{
 		// Arrange

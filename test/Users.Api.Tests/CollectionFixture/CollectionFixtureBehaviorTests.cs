@@ -1,7 +1,7 @@
-﻿using Users.Api.Tests.ClassFixture;
+﻿using Users.Api.Tests.Unit.ClassFixture;
 using Xunit.Abstractions;
 
-namespace Users.Api.Tests.CollectionFixture;
+namespace Users.Api.Tests.Unit.CollectionFixture;
 
 // These 2 test classes are sharing the same fixture, which is good to separate test groups
 // Take not of the annotations on test classes

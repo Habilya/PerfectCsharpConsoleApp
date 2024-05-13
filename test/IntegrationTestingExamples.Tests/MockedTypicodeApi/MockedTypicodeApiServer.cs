@@ -2,7 +2,7 @@
 using WireMock.ResponseBuilders;
 using WireMock.Server;
 
-namespace IntegrationTestingExamples.Tests.MockedTypicodeApi;
+namespace TestingExamples.Tests.lntegration.MockedTypicodeApi;
 
 public class MockedTypicodeApiServer : IDisposable
 {

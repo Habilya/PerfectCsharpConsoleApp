@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using System.Reflection;
 
-namespace Users.Api.Tests.PrivateMemberTests;
+namespace Users.Api.Tests.Unit.PrivateMemberTests;
 
 public class SomeClassInTheProject
 {
@@ -56,7 +56,7 @@ public class PrivateMemberTests
 		var classInstance = new SomeClassInTheProject();
 
 		// Private Method info obtained using REFLEXION
-		MethodInfo privateMethodGetPDFMergeOrderDepar = typeof(Users.Api.Tests.PrivateMemberTests.SomeClassInTheProject)
+		MethodInfo privateMethodGetPDFMergeOrderDepar = typeof(Users.Api.Tests.Unit.PrivateMemberTests.SomeClassInTheProject)
 			.GetMethod("GetPDFMergeOrderDepar", BindingFlags.NonPublic | BindingFlags.Instance);
 
 		object[] methodParameters = new object[1] { input };

@@ -1,6 +1,6 @@
 ﻿using Xunit.Abstractions;
 
-namespace Users.Api.Tests.DefaultBehaviorTests;
+namespace Users.Api.Tests.Unit.DefaultBehaviorTests;
 
 public class DefaultBehaviorTests
 {

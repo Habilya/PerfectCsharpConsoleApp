@@ -8,7 +8,7 @@ using Users.Api.Models;
 using Users.Api.Repositories;
 using Users.Api.Services;
 
-namespace Users.Api.Tests;
+namespace Users.Api.Tests.Unit;
 
 public class UserServiceTests
 {

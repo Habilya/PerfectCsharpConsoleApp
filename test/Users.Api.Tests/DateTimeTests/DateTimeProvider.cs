@@ -1,4 +1,4 @@
-﻿namespace Users.Api.Tests.DateTimeTestsp;
+﻿namespace Users.Api.Tests.Unit.DateTimeTestsp;
 
 public class DateTimeProvider : IDateTimeProvider
 {

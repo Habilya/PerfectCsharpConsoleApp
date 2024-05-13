@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using System.Collections;
 
-namespace Users.Api.Tests.AdvancedParametrizationTests;
+namespace Users.Api.Tests.Unit.AdvancedParametrizationTests;
 
 public class AdvancedParametrizationTests
 {

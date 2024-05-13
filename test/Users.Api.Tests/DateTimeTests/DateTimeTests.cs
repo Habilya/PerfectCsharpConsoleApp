@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
 using NSubstitute;
-using Users.Api.Tests.DateTimeTestsp;
+using Users.Api.Tests.Unit.DateTimeTestsp;
 
-namespace Users.Api.Tests.DateTimeTests;
+namespace Users.Api.Tests.Unit.DateTimeTests;
 
 
 public class GreeterTests

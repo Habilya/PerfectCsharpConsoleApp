@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AA2BE685-9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltimateHelloWorldConsoleApp", "src\UltimateHelloWorldConsoleApp\UltimateHelloWorldConsoleApp.csproj", "{3EFF8076-0206-4BE1-80DE-98317C63F3FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldTests", "test\HelloWorldTests\HelloWorldTests.csproj", "{48C4F075-454C-4D67-9650-43807EE92526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld.Tests.Unit", "test\HelloWorldTests\HelloWorld.Tests.Unit.csproj", "{48C4F075-454C-4D67-9650-43807EE92526}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externalfiles", "externalfiles", "{E52BEAB4-05CC-46ED-90D7-2787A3B1BE13}"
 	ProjectSection(SolutionItems) = preProject
@@ -27,15 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostmanCloneUI", "src\Postm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api", "src\Users.Api\Users.Api.csproj", "{1886C70C-067E-499A-9D9D-63D2AC00322A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api.Tests", "test\Users.Api.Tests\Users.Api.Tests.csproj", "{7DB67E78-CE31-4CCB-B700-2CAE545276BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api.Tests.Unit", "test\Users.Api.Tests\Users.Api.Tests.Unit.csproj", "{7DB67E78-CE31-4CCB-B700-2CAE545276BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTestingExamples.Tests", "test\IntegrationTestingExamples.Tests\IntegrationTestingExamples.Tests.csproj", "{EFC0BF8D-C489-48A2-B340-6E87301E0378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingExamples.Tests.lntegration", "test\IntegrationTestingExamples.Tests\TestingExamples.Tests.lntegration.csproj", "{EFC0BF8D-C489-48A2-B340-6E87301E0378}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customers.Api", "src\Customers.Api\Customers.Api.csproj", "{773A1258-B7EE-4985-9088-1C34E4C4C3E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customers.WebApp", "src\Customers.WebApp\Customers.WebApp.csproj", "{B46AD59B-56F0-49DB-926C-0F035AF84339}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.WebApp.Tests", "test\Customers.WebApp.Tests\Customers.WebApp.Tests.csproj", "{7DC2A42B-3F1F-45CF-AD67-8EF9F6B5CC6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.WebApp.Tests.Integration", "test\Customers.WebApp.Tests\Customers.WebApp.Tests.Integration.csproj", "{7DC2A42B-3F1F-45CF-AD67-8EF9F6B5CC6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

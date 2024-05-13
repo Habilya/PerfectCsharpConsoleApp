@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
-using IntegrationTestingExamples.Tests.MockedTypicodeApi;
+using TestingExamples.Tests.lntegration.MockedTypicodeApi;
 
-namespace IntegrationTestingExamples.Tests;
+namespace TestingExamples.Tests.lntegration;
 
 public class IntegrationTestsExamples : IClassFixture<TypicodeApiFactory>
 {

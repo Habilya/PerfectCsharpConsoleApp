@@ -8,7 +8,7 @@ using Users.Api.Mappers;
 using Users.Api.Models;
 using Users.Api.Services;
 
-namespace Users.Api.Tests;
+namespace Users.Api.Tests.Unit;
 
 public class UserControllerTests
 {

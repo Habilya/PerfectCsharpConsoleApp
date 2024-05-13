@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Microsoft.Playwright;
 
-namespace Customers.WebApp.Tests.Pages;
+namespace Customers.WebApp.Tests.Integration.Pages;
 
 [Collection("Test collection")]
 public class GetAllCustomersTests

@@ -3,7 +3,7 @@ using HelloWorldLibrary.BusinessLogic;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace HelloWorldTests.BusinessLogic;
+namespace HelloWorld.Tests.Unit.BusinessLogic;
 
 public class MessagesTests
 {

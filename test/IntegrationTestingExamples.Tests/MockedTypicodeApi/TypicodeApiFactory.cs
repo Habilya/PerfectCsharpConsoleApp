@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 using Users.Api;
 
-namespace IntegrationTestingExamples.Tests.MockedTypicodeApi;
+namespace TestingExamples.Tests.lntegration.MockedTypicodeApi;
 
 public class TypicodeApiFactory : WebApplicationFactory<IApiMarker>, IAsyncLifetime
 {

@@ -1,4 +1,4 @@
-﻿namespace Users.Api.Tests.LongRunningTests;
+﻿namespace Users.Api.Tests.Unit.LongRunningTests;
 
 public class LongRunningTests
 {

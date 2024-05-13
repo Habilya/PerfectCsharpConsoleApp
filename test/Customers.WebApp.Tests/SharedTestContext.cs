@@ -5,7 +5,7 @@ using Ductus.FluentDocker.Model.Common;
 using Ductus.FluentDocker.Services;
 using Microsoft.Playwright;
 
-namespace Customers.WebApp.Tests;
+namespace Customers.WebApp.Tests.Integration;
 
 public class SharedTestContext : IAsyncLifetime
 {
