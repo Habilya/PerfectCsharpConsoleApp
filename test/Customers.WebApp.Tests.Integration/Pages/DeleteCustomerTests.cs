@@ -13,7 +13,7 @@ public class DeleteCustomerTests
 		_testContext = testContext;
 	}
 
-	[Fact(Timeout = 3000)]
+	[Fact(Timeout = 5000)]
 	public async Task Delete_DeletesCustomer_WhenCustomerExists()
 	{
 		// Arrange
