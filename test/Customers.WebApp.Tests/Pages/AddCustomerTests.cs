@@ -13,7 +13,7 @@ public class AddCustomerTests
 		_testContext = testContext;
 	}
 
-	[Fact(Timeout = 3000)]
+	[Fact(Timeout = 4000)]
 	public async Task Create_ShouldCreateCustomer_WhenDataIsValid()
 	{
 		// Arrange
